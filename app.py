@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 mail = None
 
-app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+app.secret_key = os.environ['KEY']
 ## --------- DATABASE ------
 
 
