@@ -3,6 +3,7 @@ from flask import Flask, render_template, url_for, session, flash,g
 from markupsafe import escape
 from flask import request
 from werkzeug.utils import redirect
+import shutil
 
 
 import sqlite3
@@ -14,8 +15,14 @@ mail = None
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 ## --------- DATABASE ------
 
+original_db_path = "./my_database.db"
 
-DATABASE = 'my_database.db'
+DATABASE = os.path.join("/tmp", "my_database.db")
+
+# Copy the database if it doesn't exist in `/tmp`
+if not os.path.exists(DATABASE):
+    shutil.copyfile(original_db_path, DATABASE)
+
 
 def get_db():
     if 'db' not in g:
