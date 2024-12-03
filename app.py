@@ -62,7 +62,7 @@ def register(mail, password, name, age):
         db.commit()
         return True
     except sqlite3.Error as e:
-        print(f"An error occurred during registration: {e}")
+        flash(f"An error occurred during registration: {e}","error")
         return False
 ################### ____----------------------------------
 
