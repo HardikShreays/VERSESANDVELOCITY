@@ -131,6 +131,9 @@ def logout():
     session.pop(mail, None)
     mail = None
     return redirect(url_for('login'))
+@app.route('/')
+def index():
+    return redirect(url_for('login'))
 if __name__ == "__main__":
     app.run(port=5001, host="0.0.0.0")
 
