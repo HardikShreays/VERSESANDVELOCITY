@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='rstyle.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-mod-3">
+                <form action="/register" method="POST" class="signup-form">
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                    <li style="color: red;">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+                    <h2>SIGN UP</h2>
+                    <label for="name">Name</label>
+                    <input type="text" class="box" id="name" placeholder="Enter Your Name" name="name" required><br>
+
+                    <label for="age">Age</label>
+                    <input required type="number" class="box" id="age" name="age" placeholder="Enter Your Age"><br>
+
+                    <label for="mail"> Email</label>
+                    <input required type="email" class="box" id="mail" name="mail" placeholder="Enter Your Email"><br>
+
+                    <label for="phn">Phone Number</label>
+                    <input required type="number" class="box" id="phn" name="phn" placeholder="Enter Your Number" minlength="10" maxlength="10"><br>
+
+                    <label>Gender</label>
+                    <label for="male">Male</label>
+                    <input required type="radio" class="box" id="male" name="gender" value="Male">
+                    <label for="female">Female</label>
+                    <input required type="radio" class="box" id="female" name="gender" value="Female"><br>
+
+                    <label for="password">Enter Password</label>
+                    <input required type="password" class="box" id="password" name="password"><br>
+
+                    <input type="submit" name="submit" value="Submit" class="submit-btn">
+                </form>
+                <p class="login-link">
+                    Already have an account? <a href="/login">Login</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

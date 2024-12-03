@@ -1,0 +1,216 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #ff6a00, #4b2c20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ffffff;
+}
+.verses {
+    padding: 10px;
+    border: #4b2c20 2px solid;
+    border-radius: 10px;
+    margin: 25px;
+}
+
+/* Container for Login */
+.login-container {
+    background-color: rgba(75, 44, 32, 0.15);
+    padding: 25px 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    backdrop-filter: blur(8px);
+}
+
+/* Form Headline */
+.login-container h2 {
+    margin: 0 0 20px;
+    font-size: 28px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Labels */
+.login-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #ffdda1;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Input Boxes */
+.login-container .box {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    font-size: 14px;
+    color: #ffffff;
+    background: rgba(75, 44, 32, 0.2);
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.login-container .box::placeholder {
+    color: rgba(255, 221, 161, 0.7);
+}
+
+.login-container .box:focus {
+    border-color: #ff4500;
+    outline: none;
+    background: rgba(75, 44, 32, 0.3);
+    box-shadow: 0 0 5px #ff4500;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: linear-gradient(45deg, #ff4500, #4b2c20);
+    color: #ffffff;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:hover {
+    background: linear-gradient(45deg, #4b2c20, #ff4500);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Add subtle animations */
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px 25px;
+    }
+
+    .login-container h2 {
+        font-size: 24px;
+    }
+
+    .login-container label {
+        font-size: 13px;
+    }
+
+    .login-container .box {
+        padding: 10px;
+    }
+
+    .submit-btn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+
+/* sucessss ------------
+/* Success Box */
+.success-box {
+    background-color: rgba(75, 44, 32, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #ffffff;
+    max-width: 500px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    backdrop-filter: blur(8px);
+}
+
+.success-box h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffdda1;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.success-box p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.home-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    background: linear-gradient(45deg, #ff4500, #4b2c20);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+    background: linear-gradient(45deg, #4b2c20, #ff4500);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.home-btn:active {
+    transform: scale(0.98);
+}
+
+/* Media Query Adjustments */
+@media (max-width: 768px) {
+    .success-box {
+        padding: 20px;
+    }
+
+    .success-box h2 {
+        font-size: 28px;
+    }
+
+    .success-box p {
+        font-size: 16px;
+    }
+
+    .home-btn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+/* Login Link */
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.login-link a {
+    color: #ffdda1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #ff4500;
+}

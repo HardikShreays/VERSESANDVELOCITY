@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" >
+    <title>Random Content Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, #ff7eb3, #ff758c);
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 48px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 20px;
+            max-width: 800px;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .fun-facts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .fact {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            transition: transform 0.3s;
+        }
+
+        .fact:hover {
+            transform: scale(1.05);
+        }
+
+        .links {
+            margin-top: 30px;
+        }
+
+        .links a {
+            color: #ffdda1;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .links a:hover {
+            color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Random Content Page!</h1>
+    <p>Here's a page filled with random tidbits, fun facts, and cool links. Sit back, relax, and enjoy the randomness!</p>
+
+    <div class="fun-facts">
+        <div class="fact">
+            <h3>Fact #1</h3>
+            <p>Did you know? Honey never spoils! Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible.</p>
+        </div>
+        <div class="fact">
+            <h3>Fact #2</h3>
+            <p>The unicorn is the national animal of Scotland. Yes, you read that right—Scotland has a mythical creature as its national animal!</p>
+        </div>
+        <div class="fact">
+            <h3>Fact #3</h3>
+            <p>An octopus has three hearts and blue blood. Two hearts pump blood to the gills, while the third pumps it to the rest of the body.</p>
+        </div>
+    </div>
+
+    <div class="links">
+        <p>Check out these cool pages:</p>
+        <a href="/signup">Sign Up</a>
+        <a href="/login">Login</a>
+        <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Random Wikipedia Page</a>
+    </div>
+</body>
+</html>

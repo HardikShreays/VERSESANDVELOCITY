@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Login</title>
+</head>
+<body>
+    <h2 class = 'verses'>Verses And Velocity</h2>
+    <div class="login-container">
+        <h2>Login</h2>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                    <li style="color: red;">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+        <form action="/login" method="POST">
+            <label for="mail">Enter Your Mail</label>
+            <input type="email" class="box" id="mail" placeholder="Enter Your Email" name="mail" required>
+
+            <label for="password">Enter Your Password</label>
+            <input type="password" class="box" id="password" placeholder="Password.." name="password" required>
+
+            <input type="submit" name="submit" value="Submit" class="submit-btn">
+        </form>
+        <p class="signup-link">
+            Don’t have an account? <a href="/register">Sign Up</a>
+        </p>
+    </div>
+</body>
+</html>
